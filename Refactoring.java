@@ -1,4 +1,4 @@
-public class rename {
+public class Refactoring {
 
     public static final char ADDITION = '+';
     public static final char SUBTRACTION = '-';
@@ -23,6 +23,22 @@ public class rename {
         }
     }
 
+    public static String fizzBuzz(int number) {
+        boolean isFizz = number % 3 == 0;
+        boolean isBuzz = number % 5 == 0;
+
+        if (isFizz && isBuzz)
+            return "FizzBuzz";
+
+        if (isFizz)
+            return "Fizz";
+
+        if (isBuzz)
+            return "Buzz";
+
+        return number + "";
+    }
+
     public static void main(String[] args) {
 
         System.out.println("10 + 5 = " + calculate(10, 5, ADDITION));
@@ -32,5 +48,11 @@ public class rename {
         System.out.println("10 * 5 = " + calculate(10, 5, MULTIPLICATION));
 
         System.out.println("10 / 5 = " + calculate(10, 5, DIVISION));
+
+        System.out.println("10 / 5 = " + calculate(10, 5, DIVISION));
+
+        for (int i = 1; i <= 15; i++) {
+            System.out.println("Số " + i + ": " + fizzBuzz(i));
+        }
     }
 }
